@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danzas típicas de la selva peruana</title>
+
+    <link rel="stylesheet" href="selva.css" />
+    <link rel="stylesheet" href="selva.js">
+</head>
+<body>
+    <h1>Danzas típicas de la selva peruana</h1>
+    <div class="slideshow">
+        <img id="imagen" alt="Foto actual" />
+    </div>
+
+    <script>
+   
+        const imagenes = [
+            "Selva/1.jpg",
+            "Selva/2.jpg",
+            "Selva/3.jpg",
+            "Selva/4.jpg",
+            "Selva/5.jpg",
+            "Selva/6.jpg",
+            "Selva/7.jpg",
+            "Selva/8.jpg",
+            "Selva/9.jpg",
+            "Selva/10.jpg"
+        ];
+
+        let indice = 0;
+        const img = document.getElementById("imagen");
+
+        function mostrarSiguienteFoto() {
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+
+                indice = (indice + 1) % imagenes.length;
+            }, 500);
+        }
+
+        mostrarSiguienteFoto();
+
+        setInterval(mostrarSiguienteFoto, 3000);
+    </script>
+</body>
+
+<body>
+    <h1>Danzas típicas de la selva peruana</h1>
+
+    <div class="descripcion">
+        <p>Las danzas de la selva reflejan la cultura, tradiciones y la vida cotidiana de las comunidades amazónicas. Muchas de estas danzas combinan elementos indígenas con influencias afroperuanas y coloniales, creando expresiones únicas llenas de ritmo y color.</p>
+
+        <ul>
+            <li><strong>El Alcatraz:</strong> Una danza alegre que representa la vida en la selva y la convivencia con la naturaleza.</li>
+            <li><strong>El Festejo:</strong> De origen afroperuano, es muy rítmica y festiva, celebrando la alegría y el baile.</li>
+            <li><strong>El Tondero:</strong> Aunque es más típico de la costa, también se practica en algunas zonas de la selva.</li>
+            <li><strong>La Danza del Camarón:</strong> Representa la pesca y las actividades del río, con movimientos que imitan el desplazamiento de los camarones.</li>
+            <li><strong>Lando:</strong> Otra danza afroperuana con ritmo suave y elegante, muy popular en la selva.</li>
+            <li><strong>Marinera:</strong> Una danza tradicional que también tiene variantes en la selva, caracterizada por la coquetería y el juego entre pareja.</li>
+            <li><strong>Zamacueca:</strong> Antecesora de la marinera, con un ritmo alegre y movimientos llamativos.</li>
+        </ul>
+
+        <p>Estas danzas son parte vital de las festividades locales, celebraciones religiosas y eventos culturales, mostrando la riqueza y diversidad de la selva peruana.</p>
+    </div>
+    
+</body>
+</html>

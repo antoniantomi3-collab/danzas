@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danzas típicas de la Costa peruana</title>
+
+    <link rel="stylesheet" href="costa.css" />
+    <link rel="stylesheet" href="costa.js">
+</head>
+<body>
+    <h1>Danzas típicas de la Costa peruana</h1>
+    <div class="slideshow">
+        <img id="imagen" alt="Foto actual" />
+    </div>
+
+    <script>
+   
+        const imagenes = [
+            "Costa/1.jpg",
+            "Costa/2.jpg",
+            "Costa/3.jpg",
+            "Costa/4.jpg",
+            "Costa/5.jpg",
+            "Costa/6.jpg",
+            "Costa/7.jpg",
+            "Costa/8.jpg",
+            "Costa/9.jpg",
+            "Costa/10.jpg"
+        ];
+
+        let indice = 0;
+        const img = document.getElementById("imagen");
+
+        function mostrarSiguienteFoto() {
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+
+                indice = (indice + 1) % imagenes.length;
+            }, 500);
+        }
+
+        mostrarSiguienteFoto();
+
+        setInterval(mostrarSiguienteFoto, 3000);
+    </script>
+</body>
+
+<body>
+    <h1>Danzas típicas de la costa peruana</h1>
+
+    <div class="descripcion">
+        <p>Las danzas de la costa peruana reflejan la influencia mestiza, donde se mezclan tradiciones indígenas, españolas y africanas. Son alegres, coloridas y muchas veces cuentan historias de la vida cotidiana, el trabajo y las celebraciones.</p>
+
+        <ul>
+            <li><strong>Marinera:</strong> La danza más representativa, conocida por su elegancia y coquetería, representa un cortejo amoroso con movimientos de pañuelo y zapateo.</li>
+            <li><strong>Festejo:</strong> De origen afroperuano, es una danza muy rítmica y festiva, que celebra la alegría y la cultura afrodescendiente.</li>
+            <li><strong>Tondero:</strong> Tradicional del norte del Perú, es una danza que combina movimientos de cortejo y representa la vida rural y costera.</li>
+            <li><strong>Vals Criollo:</strong> Un baile romántico y elegante que adapta el vals europeo con un toque criollo y peruano.</li>
+            <li><strong>Polka y Zamacueca:</strong> Danzas con raíces europeas, adaptadas en la costa con influencias criollas y afroperuanas.</li>
+        </ul>
+
+        <p>Estas danzas forman parte esencial de las festividades y celebraciones costeras, mostrando la riqueza cultural y la historia mestiza del Perú.</p>
+    </div>
+</body>
+
+</html>

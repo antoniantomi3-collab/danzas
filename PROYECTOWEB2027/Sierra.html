@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Danzas típicas de la Siera peruana</title>
+
+    <link rel="stylesheet" href="sierra.css" />
+    <link rel="stylesheet" href="sierra.js">
+</head>
+<body>
+    <h1>Danzas típicas de la Sierra peruana</h1>
+    <div class="slideshow">
+        <img id="imagen" alt="Foto actual" />
+    </div>
+
+    <script>
+   
+        const imagenes = [
+            "Sierra/1.jpg",
+            "Sierra/2.jpg",
+            "Sierra/3.jpg",
+            "Sierra/4.jpg",
+            "Sierra/5.jpg",
+            "Sierra/6.jpg",
+            "Sierra/7.jpg",
+            "Siera/8.jpg",
+            "Sierra/9.jpg",
+            "Sierra/10.jpg"
+        ];
+
+        let indice = 0;
+        const img = document.getElementById("imagen");
+
+        function mostrarSiguienteFoto() {
+            img.style.opacity = 0;
+
+            setTimeout(() => {
+                img.src = imagenes[indice];
+                img.style.opacity = 1;
+
+                indice = (indice + 1) % imagenes.length;
+            }, 500);
+        }
+
+        mostrarSiguienteFoto();
+
+        setInterval(mostrarSiguienteFoto, 3000);
+    </script>
+</body>
+
+<body>
+    <h1>Danzas típicas de la sierra peruana</h1>
+
+    <div class="descripcion">
+        <p>Las danzas de la sierra peruana reflejan la cultura andina y sus tradiciones ancestrales. Son expresiones llenas de color, ritmo y simbolismo, vinculadas a ceremonias agrícolas, festividades religiosas y celebraciones comunitarias.</p>
+
+        <ul>
+            <li><strong>Huayno:</strong> La danza y música más representativa de la sierra, con ritmo alegre y melodías nostálgicas, que habla del amor, la vida rural y la naturaleza.</li>
+            <li><strong>Diablada:</strong> Una danza con máscaras y disfraces de diablos y ángeles, que representa la lucha entre el bien y el mal durante festividades religiosas.</li>
+            <li><strong>Carnaval de Cajamarca:</strong> Con trajes coloridos y música alegre, es parte de las celebraciones del carnaval en la sierra norte.</li>
+            <li><strong>Wititi:</strong> Danza de la región de Arequipa, caracterizada por movimientos vigorosos y vestimenta tradicional.</li>
+            <li><strong>Qhapaq Ñan:</strong> Danzas que honran las rutas y caminos ancestrales de los incas, llenas de simbolismo histórico.</li>
+            <li><strong>Caporales:</strong> Influenciada por la cultura afro-boliviana, con movimientos enérgicos y trajes llamativos, popular en festividades andinas.</li>
+        </ul>
+
+        <p>Estas danzas no solo son entretenimiento, sino también una forma de mantener viva la identidad cultural andina y sus valores.</p>
+    </div>
+</body>
+
+</html>
